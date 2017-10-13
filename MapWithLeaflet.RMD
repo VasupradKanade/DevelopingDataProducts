@@ -1,0 +1,34 @@
+---
+title: "Developing Data Products - Map Using Leaflet"
+author: "Vasuprad Kanade"
+date: "October 12, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+##Vasuprad.Kanade@accenture.com
+## Course 9-Developing Data Products - Assignment 1
+```
+
+## Introduction
+
+Course 9 - Developing Data Products - Week 2 - Assignment 1: Create a web page using R Markdown that features a map created with Leaflet.
+
+
+```{r, echo=TRUE}
+library(leaflet)
+
+```
+
+### Create Map
+
+Creating a map with Leaflet:
+
+```{r, echo=TRUE}
+map1 <- leaflet() %>%
+  addTiles() %>%  # Add default OpenStreetMap map tiles
+  addMarkers(lat=18.520432, lng=73.855408, popup="Shaniwar Wada, Pune, India")
+map1
+```
+
